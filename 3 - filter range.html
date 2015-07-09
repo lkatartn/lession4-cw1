@@ -13,7 +13,13 @@
 
 	<script type="text/javascript">
 		function filterRange(arr, a, b) {
-
+			var newArr=[];
+			arr.forEach(function (item) {
+				if ((item <=b) && (item>=a)) {
+					newArr.push(item);
+				}
+			});
+			return newArr;
 		}
 
 		window.onload = function(){
@@ -22,7 +28,7 @@
 				256, 78, 795, 319, 671, 164, 332, 18, 55, 929, 704, 809, 397, 316, 416, 800, 951, 827, 1, 114, 73, 164, 447, 794, 813
 			]
 			
-			var filtered = filterRange(arr, 200, 300);
+			var filtered = filterRange(array, 200, 300);
 			console.log("filtered: ", filtered);
 		}
 	</script>
