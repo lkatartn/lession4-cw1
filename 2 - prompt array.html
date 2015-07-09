@@ -12,10 +12,21 @@
 
 
 	<script type="text/javascript">
-		// window.onload = function(){
-		// 	var value = prompt("Введите значение переменной value", 0);
-		// 	alert("Значение переменной value = " + value);
-		// }
+		window.onload = function(){
+			var arr=[];
+			var currentRight=true;
+			var currentVal;
+			while (currentRight==true) {
+				currentVal = prompt("Give me more numbers!");
+				if ((currentVal==='') || (isNaN(+currentVal)) || (currentVal===null)) {
+					currentRight=false;
+				} else {
+					arr.push(currentVal);
+				}
+			};
+			console.log(arr);
+
+		}
 	</script>
 </head>
 <body>
