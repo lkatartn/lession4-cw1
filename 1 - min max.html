@@ -13,11 +13,19 @@
 
 	<script type="text/javascript">
 		function min(array){
-
+			var minVal= array[0]
+			for(var i=0; i< array.length; i++ ) {
+				minVal= (array[i]< minVal)? array[i] : minVal;
+			}
+			return minVal;
     	}
 
     	function max(array){
-    		
+    		var maxVal= array[0]
+			for(var i=0; i< array.length; i++ ) {
+				maxVal= (array[i] > maxVal)? array[i] : maxVal;
+			}
+			return maxVal;    		
     	}
 
 	    window.onload = function(){
